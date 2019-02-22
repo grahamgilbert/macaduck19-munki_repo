@@ -1,6 +1,5 @@
 defaults: &defaults
   environment:
-    - SOURCE_DIR: /tmp/site/_site
     - S3_BUCKET: macaduck19
     - S3_REGION: us-east-1
 version: 2
@@ -19,7 +18,7 @@ jobs:
           command: sudo pip install awscli
       - run:
           name: Upload to s3
-          command: aws s3 sync $SOURCE_DIR s3://$S3_BUCKET --delete
+          command: aws s3 sync . s3://$S3_BUCKET --delete
   install:
     macos:
       xcode: "10.1.0"
