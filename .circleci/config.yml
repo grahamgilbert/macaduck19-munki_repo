@@ -5,7 +5,7 @@ defaults: &defaults
     - S3_REGION: us-east-1
 version: 2
 jobs:
-  deploy:
+  upload:
     <<: *defaults
     docker:
        - image: circleci/python:2.7-jessie
