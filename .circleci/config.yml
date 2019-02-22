@@ -24,7 +24,6 @@ jobs:
       xcode: "10.1.0"
     shell: /bin/bash --login -o pipefail
     steps:
-      - checkout
       - run: curl -OL https://github.com/munki/munki/releases/download/v3.5.2/munkitools-3.5.2.3637.pkg
       - run: sudo installer -pkg munkitools-3.5.2.3637.pkg -target /
       - run: sudo defaults write /Library/Preferences/ManagedInstalls SoftwareRepoURL "http://macaduck19.s3-website-us-east-1.amazonaws.com"
