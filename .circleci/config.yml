@@ -35,4 +35,6 @@ workflows:
   commit:
     jobs:
       - upload
-      - install
+      - install:
+          requires:
+           - upload
