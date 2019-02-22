@@ -34,7 +34,13 @@ workflows:
   version: 2
   commit:
     jobs:
-      - upload
+      - upload:
+          filters:
+            branches:
+              only: master
       - install:
+          filters:
+            branches:
+              only: master
           requires:
            - upload
