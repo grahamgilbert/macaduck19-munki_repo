@@ -6,7 +6,7 @@
 	<array>
 		<string>testing</string>
 	</array>
-	<key>optional_installs</key>
+	<key>managed_installs</key>
 	<array>
 		<string>GoogleChrome</string>
 	</array>
